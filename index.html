@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
+<button onclick="showContent()">Show hidden content</button>
 
-</head>  
-  <title> Shrimp4All </title>
-</head>
-<body>
+<template>
+  <h2>Flower</h2>
+  <img src="img_white_flower.jpg" width="214" height="204">
+</template>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-</body>
-</html>
+<script>
+function showContent() {
+  let temp = document.getElementsByTagName("template")[0];
+  let clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
