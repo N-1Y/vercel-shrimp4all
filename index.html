@@ -1,14 +1,95 @@
-<button onclick="showContent()">Show hidden content</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrimp4All - Fresh and Sustainable Shrimp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e3f2fd; /* Light blue background for ocean feel */
+      color: #333; /* Dark text for contrast */
+    }
+    header {
+      background-color: #ff7043; /* Shrimp orange */
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #ff7043; /* Shrimp orange for headings */
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery img {
+      border: 2px solid #ff7043; /* Shrimp orange border for images */
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #1976d2; /* Ocean blue */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
 
-<template>
-  <h2>Flower</h2>
-  <img src="img_white_flower.jpg" width="214" height="204">
-</template>
+  <header>
+    <h1>Welcome to Shrimp4All</h1>
+    <p>Fresh and Sustainable Shrimp for Everyone</p>
+  </header>
 
-<script>
-function showContent() {
-  let temp = document.getElementsByTagName("template")[0];
-  let clon = temp.content.cloneNode(true);
-  document.body.appendChild(clon);
-}
-</script>
+  <div class="container">
+    <h2>About Us</h2>
+    <p>We are Shrimp4All, dedicated to providing the freshest and highest quality shrimp. Our team is passionate about sustainable seafood practices and delivering top-notch products to our customers.</p>
+
+    <h2>Our Shrimp</h2>
+    <div class="gallery">
+      <img src="shrimp1.jpg" alt="Shrimp 1">
+      <img src="shrimp2.jpg" alt="Shrimp 2">
+      <img src="shrimp3.jpg" alt="Shrimp 3">
+    </div>
+
+    <h2>Our Team</h2>
+    <div class="gallery">
+      <img src="team1.jpg" alt="Team Member 1">
+      <img src="team2.jpg" alt="Team Member 2">
+      <img src="team3.jpg" alt="Team Member 3">
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Shrimp4All. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showContent() {
+      let temp = document.getElementsByTagName("template")[0];
+      let clon = temp.content.cloneNode(true);
+      document.body.appendChild(clon);
+    }
+  </script>
+
+</body>
+</html>
